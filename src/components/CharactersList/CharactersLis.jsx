@@ -1,3 +1,4 @@
+//файл называется CharactersLis (без t)
 import React from 'react';
 import shortid from 'shortid';
 import PropTypes from 'prop-types'
@@ -7,7 +8,7 @@ export const CharactersList = ({characters}) => {
   return (
     characters.map(character => (
       <Character
-        key={shortid.generate()}
+        key={shortid.generate()} // добавь id во все обьекты когда получаешь ответ с апи
         name={character.name}
         birthYear={character.birth_year}
       />
