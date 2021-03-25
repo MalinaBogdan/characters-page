@@ -3,7 +3,7 @@ import { CommentList } from "../CommentList";
 import './commentBox.scss';
 
 export const CommentBox = () => {
-  const [newComment, setNewComment] = useState('');
+  const [newComment, setNewComment] = useState(''); // [newComment, addComment] ?
   const [comments, setComments] = useState([]);
   const [error, setError] = useState(false);
 
@@ -16,7 +16,7 @@ export const CommentBox = () => {
       setComments([...comments, newComment.trim()]);
       setNewComment('');
     }
-
+    // добавь в else 
     setError(true)
   }
 
